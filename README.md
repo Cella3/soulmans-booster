@@ -2,6 +2,13 @@
 
 A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, and music-reactive visuals. Android 8.0 or newer. No account, ads, analytics, internet, or microphone permission.
 
+## Download
+
+- [Install the Android APK](Soulmans-Sound-Booster.apk)
+- [Download the Android Studio source](Soulmans-Sound-Booster-source.zip)
+
+Download the APK on the phone and open it to install. Version 5.0 uses the existing signing certificate and updates earlier Soulmans installs.
+
 ## Listening
 
 - **Files / Folder:** choose audio or video files, multiple files, or a folder and its subfolders using Android Files. Access is remembered. Android restricts some system folders; choose a media subfolder instead.
