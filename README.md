@@ -1,13 +1,22 @@
-# Soulmans Sound Booster — Music Player 7.0
+# Soulmans Sound Booster — Music Player 8.0
 
-A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, live recording, and music-reactive visuals. Android 8.0 or newer. No account, ads, analytics, or internet permission. Audio recording permission is requested only when you choose to record; normal listening does not need it.
+A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, live recording, music-reactive visuals, and a draggable floating mini player. Android 8.0 or newer. No account, ads, analytics, or internet permission. Audio recording and Display over other apps access are optional and requested only when you choose those features.
 
 ## Download
 
 - [Install the Android APK](Soulmans-Sound-Booster.apk)
 - [Download the Android Studio source](Soulmans-Sound-Booster-source.zip)
 
-Download the APK on the phone and open it to install. Version 7.0 uses the existing signing certificate and updates earlier Soulmans installs.
+Download the APK on the phone and open it to install. Version 8.0 uses the existing signing certificate and updates earlier Soulmans installs.
+
+## Floating mini player
+
+- Tap **MINI PLAYER** on Now Playing, or **OPEN FLOATING MINI PLAYER** in Sound. On first use, enable **Display over other apps** for Soulmans in Android Settings, then return to the app. The full app moves into the background and a compact player floats over your other apps.
+- The original Winamp-inspired frame uses brushed navy panels, cyan accents, and a compact digital readout. Music shows an actual decoded waveform with a spectrum backdrop; it uses no microphone. Videos replace the waveform with the playing video.
+- **Drag the title bar** to move the rectangle. **Drag the bottom-right corner sideways** to resize it. Its size and position are remembered; the frame stays inside the screen bounds. **▁** folds it into a small title bar with a play/pause button; **▣** opens it again.
+- Previous, play/pause, next, seek, and device-volume controls act on the same player and queue. **SOUND** opens the full boost, EQ, and pitch controls. **↗** returns to the full player. **×** closes only the floating window; playback continues. The ongoing mini-player notification also has a close action.
+- Videos retain pinch-to-zoom, drag-to-frame, and double-tap reset inside the preview. Move the whole window using the title bar. Video and music keep their position when switching between the full and mini player.
+- Android can hide overlays on protected screens, permission dialogs, or the lock screen. If Display over other apps is revoked, the mini window closes. It never opens automatically at boot.
 
 ## Listening
 
@@ -60,7 +69,7 @@ gradlew.bat connectedDebugAndroidTest
 gradlew.bat assembleRelease
 ```
 
-Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 7, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
+Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 8, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
 
 Media3 ExoPlayer and MediaSessionService provide decoding and background media controls. Storage Access Framework handles file and folder selection. SQLite stores tracks, playlists, and history. A custom PCM processor supplies the EQ, gain, limiter, and frequency analysis.
 
