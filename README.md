@@ -1,4 +1,4 @@
-# Soulman's Media Player — Silver & Gold 9.0
+# Soulman's Media Player — Black & Gold Rack 9.1
 
 A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, live recording, music-reactive visuals, and a draggable floating mini player. Android 8.0 or newer. No account, ads, analytics, or internet permission. Audio recording and Display over other apps access are optional and requested only when you choose those features.
 
@@ -7,19 +7,25 @@ A personal, ad-free Android audio and video player with Soulmans artwork, option
 - [Install the Android APK](Soulmans-Sound-Booster.apk)
 - [Download the Android Studio source](Soulmans-Sound-Booster-source.zip)
 
-Download the APK on the phone and open it to install. Version 9.0 uses the existing signing certificate and updates earlier Soulmans installs. The app button now reads **Soulman's Media Player**. The download filenames remain the same for existing links.
+Download the APK on the phone and open it to install. Version 9.1 uses the existing signing certificate and updates earlier Soulmans installs. The app button now reads **Soulman's Media Player**. The download filenames remain the same for existing links.
 
-## Silver and gold reel-to-reel player
+## Modular gold reel player
 
-![Actual Android mini player with silver brushed metal, gold trim, and tape reels](Soulmans-Gold-Reel-Player.png)
+![Actual Android mini player with gold reels and expandable rack sections](Soulmans-Modular-Rack-Player.png)
 
-- The full player and draggable mini window have a brushed-aluminum face, polished gold bevels, metal transport buttons, and an engraved-style **Soulman's Media Player** nameplate. The bundled Cormorant Garamond font is distributed under the SIL Open Font License; its license is included in `app/src/main/assets/fonts/OFL.txt`. Font source: [Google Fonts](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond).
-- During music playback, six-spoke silver and gold reels rotate while tape travels through the guides and head block. The supply pack shrinks and the take-up pack grows according to the song's actual position and duration. Their combined tape area stays constant; the smaller tape pack spins faster. Seeking changes the packs immediately. Pausing stops the reels and tape motion.
-- The deck's level bars use actual decoded music samples. The mini window also retains its live waveform and spectrum below the reels, now with a gold waveform trace. Animation stops while the player is paused, the full app is in the background, or the mini window is folded.
-- Album art and the Soulmans portraits remain available. Video replaces the reel display in the mini player and retains pinch, drag, and fullscreen controls. The full music deck is hidden for video playback.
-- The window still remembers its size and position and supports title-bar dragging, corner resizing, collapse/expand, seek, transport, volume, and Sound controls. All player, EQ, sample, recording, playlist, and waveform navigation features remain available.
+- The full and floating players use a compact, stacked audio rack with a dark anodized face, polished gold reels, gold controls, brushed metal detail, and silver fastening points. The **Soulman's Media Player** nameplate and excited-face icon remain. The bundled Cormorant Garamond font is licensed under the SIL Open Font License, included in `app/src/main/assets/fonts/OFL.txt`. Font source: [Google Fonts](https://github.com/google/fonts/tree/main/ofl/cormorantgaramond).
+- Tape moves through the guides while the gold reels rotate. The supply tape pack shrinks and the take-up pack grows through the reel openings as the song progresses. The combined tape area stays constant, the smaller pack spins faster, seeking updates the packs, and pausing stops the mechanism.
+- Green digital track readouts, a gold live waveform, colored spectrum bars, and analog **RMS / PEAK** needles use the decoded audio. No microphone is needed for these displays.
+- **Tap a section heading to open or fold it.** Each section remembers its open state. The full rack has **EQ & BOOST**, **WAVEFORM / ZOOM & PAN**, **MPC SAMPLER & RECORDER**, **ARTWORK & VIDEO**, **VISUALS / SCREENSAVERS**, and **PLAYLISTS / FILES & HISTORY**. These are included features; there is nothing extra to install.
+- The mini rack expands **EQ & BOOST** directly in the window: boost and EQ switches, gain, seven metal faders, and a preset button. Tap the preset button to cycle Flat, Bass, Vocal, Bright, Rock, Electronic, and Acoustic. Moving a fader selects Custom. **PITCH & SOUND OPTIONS** opens the full sound page.
+- The mini rack's **MPC SAMPLER** expands four working pads. Tap a loaded pad to trigger it, hold to edit, or tap an empty pad to open loading/recording options. One-shot, toggle, and gate modes use the same saved samples as the full player. **STOP ALL** stops the pads while the song keeps playing.
+- **MEDIA TOOLS** opens the full waveform editor, recording options, saved playlists, visual screensavers, video/artwork display, and video loop/export editor. The requested panel opens directly and the existing music queue and position are retained. Recording only begins after choosing options and granting the Android permissions.
+- The floating window grows when sections expand. When the stack exceeds the phone's screen, scroll its contents; the title bar stays available for dragging, folding, returning, or closing. Video fills the mini display and retains pinch/drag/reset. In the full rack, the video panel moves to the top while video is playing.
+- Album artwork, the speaker-blast portrait, playlists, history, waveform navigation, pitch, boost, EQ, sample effects, recording, and video export remain available.
 
 ## Waveform zoom and pan
+
+Open **WAVEFORM / ZOOM & PAN** in the full rack, or **MEDIA TOOLS → WAVE / PAN** in the mini rack.
 
 - The song waveform and MPC sample editor now have **+ / −** zoom buttons, from 1× to 128×. Peaks load at higher resolution so zoom reveals more of the recorded volume envelope.
 - **FULL SONG** (or **FULL FILE** in the sampler) shows the entire WAV. This is the initial view when loading a file.
@@ -38,9 +44,9 @@ The launcher button now uses Soulmans' huge smiling face, red cap, sunglasses, a
 ## Floating mini player
 
 - Tap **MINI PLAYER** on Now Playing, or **OPEN FLOATING MINI PLAYER** in Sound. On first use, enable **Display over other apps** for Soulmans in Android Settings, then return to the app. The full app moves into the background and a compact player floats over your other apps.
-- The compact silver and gold frame has animated tape reels, a nameplate, and a digital readout. Music shows the decoded waveform and spectrum below the reels; it uses no microphone. Videos replace the music deck with the playing video.
+- The compact dark and gold frame has animated tape reels, a nameplate, analog level meters, digital readouts, and expandable rack sections. Music shows the decoded waveform and spectrum below the reels; it uses no microphone. Videos replace the music deck with the playing video.
 - **Drag the title bar** to move the rectangle. **Drag the bottom-right corner sideways** to resize it. Its size and position are remembered; the frame stays inside the screen bounds. **▁** folds it into a small title bar with a play/pause button; **▣** opens it again.
-- Previous, play/pause, next, seek, and device-volume controls act on the same player and queue. **SOUND** opens the full boost, EQ, and pitch controls. **↗** returns to the full player. **×** closes only the floating window; playback continues. The ongoing mini-player notification also has a close action.
+- Previous, play/pause, next, seek, and device-volume controls act on the same player and queue. **EQ** expands boost and EQ inside the mini player. **PITCH & SOUND OPTIONS** opens the full sound page. **↗** returns to the full player. **×** closes only the floating window; playback continues. The ongoing mini-player notification also has a close action.
 - Videos retain pinch-to-zoom, drag-to-frame, and double-tap reset inside the preview. Move the whole window using the title bar. Video and music keep their position when switching between the full and mini player.
 - Android can hide overlays on protected screens, permission dialogs, or the lock screen. If Display over other apps is revoked, the mini window closes. It never opens automatically at boot.
 
@@ -95,12 +101,12 @@ gradlew.bat connectedDebugAndroidTest
 gradlew.bat assembleRelease
 ```
 
-Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 11, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
+Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 12, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
 
 Media3 ExoPlayer and MediaSessionService provide decoding and background media controls. Storage Access Framework handles file and folder selection. SQLite stores tracks, playlists, and history. A custom PCM processor supplies the EQ, gain, limiter, and frequency analysis.
 
 Official references: [Media3](https://developer.android.com/jetpack/androidx/releases/media3), [background playback](https://developer.android.com/media/media3/session/background-playback), [supported formats](https://developer.android.com/media/media3/exoplayer/supported-formats), [Android audio playback capture](https://developer.android.com/media/platform/av-capture).
 
-## Version 9.0 verification
+## Version 9.1 verification
 
-The release build passed 26 unit tests and Android lint with no errors. Two isolated Android emulator integration tests verified live reel rotation, paused reel freeze, tape pack changes after seeking, window dragging and resizing, saved window placement, collapse/expand, continued music during window handoff, and video rendering in the mini window. The preview above was rendered from the actual Android window using a generated test WAV. This release has not been tested on a physical Galaxy S20 Plus.
+The release build passed 26 unit tests and Android lint with no errors. Three isolated Android emulator integration tests verified reel rotation and pause, tape changes after seeking, floating EQ and boost affecting the audio processor, sampler triggering and stopping over music, direct waveform-panel handoff, dragging/resizing and placement, collapse/expand, video rendering, and WAV/song/sample zoom and pan without changing trim points. The preview above was rendered from the actual Android window using a generated test WAV. This release has not been tested on a physical Galaxy S20 Plus.
