@@ -1,13 +1,13 @@
-# Soulmans Sound Booster — Music Player 6.0
+# Soulmans Sound Booster — Music Player 7.0
 
-A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, and music-reactive visuals. Android 8.0 or newer. No account, ads, analytics, internet, or microphone permission.
+A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, live recording, and music-reactive visuals. Android 8.0 or newer. No account, ads, analytics, or internet permission. Audio recording permission is requested only when you choose to record; normal listening does not need it.
 
 ## Download
 
 - [Install the Android APK](Soulmans-Sound-Booster.apk)
 - [Download the Android Studio source](Soulmans-Sound-Booster-source.zip)
 
-Download the APK on the phone and open it to install. Version 6.0 uses the existing signing certificate and updates earlier Soulmans installs.
+Download the APK on the phone and open it to install. Version 7.0 uses the existing signing certificate and updates earlier Soulmans installs.
 
 ## Listening
 
@@ -34,6 +34,15 @@ Download the APK on the phone and open it to install. Version 6.0 uses the exist
 - Seven software EQ bands: 60, 150, 400, 1k, 2.5k, 6k, and 12k Hz, each ±6 dB. Presets: Flat, Bass, Vocal, Bright, Rock, Electronic, and Acoustic, plus Custom. Boost and EQ each have a separate switch and are initially off.
 - **Other apps boost** retains the original experimental global audio effect. It pauses this player; starting player playback switches global boost off to avoid stacked processing. Support depends on the phone and output route. It does not boost phone calls.
 
+## Record into the sampler
+
+- Tap **RECORD** on the MPC deck, or **RECORD NEW TAKE** in a pad's editor. Choose **Phone audio** or **Microphone**, a destination pad, 44.1 or 48 kHz WAV quality, an optional three-second countdown, and a maximum of 15 seconds, 30 seconds, 60 seconds, or five minutes. Saving earlier is always available.
+- **Phone audio** requires Android 10 or newer. It records stereo media/game playback from apps that allow Android playback capture, including this player's audio. Android asks for audio-recording permission and displays its capture consent prompt for each new session. Only audio is written; the app does not create a screen recording. Apps can block capture, and protected audio or calls are not guaranteed to be recordable. The input meter and a no-signal message help identify silence.
+- **Microphone** records a mono WAV from the microphone Android selects. Use headphones when playing music if you want to reduce speaker bleed. Microphone access starts only after you press Start Recording and grant permission.
+- The live recorder shows the input level, elapsed time, **PAUSE / RESUME**, and **SAVE / STOP**. Pause skips incoming audio. Recording continues when you switch to another app or turn off the screen; its ongoing notification lets you return, pause, or save. Android can stop recording if capture permission is revoked or the input becomes unavailable.
+- **SAVE / STOP** loads the take into the chosen pad, ready for waveform trim, loop, trigger, pitch, fade, and echo editing. Every completed take also remains in **SAVED TAKES** so you can reuse it in another pad or **save the original WAV to Files**. The edited WAV export still allows clips up to 60 seconds; original recorded takes can be exported at their full recorded length.
+- Takes are stored privately on this phone and are removed if the app is uninstalled or its data is cleared. Export important takes to Files for a separate copy. No recordings are sent to a server. A recoverable draft is kept if Android interrupts a recording.
+
 ## Formats and file access
 
 Common Android-supported audio formats include MP3, AAC/M4A, FLAC, WAV, Ogg/Vorbis, Opus, and AMR. Common video containers include MP4, WebM, MKV, MOV, and 3GP when the device has a compatible codec. Android codecs vary by device, so no player can guarantee every codec, damaged file, or DRM-protected file. Unsupported or inaccessible files show an error. The waveform view reads uncompressed PCM WAV; compressed WAV variants can still play if Android can decode them, but may not get the peak view. MIDI, WMA, AIFF, and unusual encodings depend on the device and may be rejected.
@@ -51,8 +60,8 @@ gradlew.bat connectedDebugAndroidTest
 gradlew.bat assembleRelease
 ```
 
-Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 6, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
+Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 7, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
 
 Media3 ExoPlayer and MediaSessionService provide decoding and background media controls. Storage Access Framework handles file and folder selection. SQLite stores tracks, playlists, and history. A custom PCM processor supplies the EQ, gain, limiter, and frequency analysis.
 
-Official references: [Media3](https://developer.android.com/jetpack/androidx/releases/media3), [background playback](https://developer.android.com/media/media3/session/background-playback), [supported formats](https://developer.android.com/media/media3/exoplayer/supported-formats).
+Official references: [Media3](https://developer.android.com/jetpack/androidx/releases/media3), [background playback](https://developer.android.com/media/media3/session/background-playback), [supported formats](https://developer.android.com/media/media3/exoplayer/supported-formats), [Android audio playback capture](https://developer.android.com/media/platform/av-capture).
