@@ -1,4 +1,4 @@
-# Soulmans Sound Booster — Music Player 8.1
+# Soulmans Sound Booster — Music Player 8.2
 
 A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, live recording, music-reactive visuals, and a draggable floating mini player. Android 8.0 or newer. No account, ads, analytics, or internet permission. Audio recording and Display over other apps access are optional and requested only when you choose those features.
 
@@ -7,7 +7,16 @@ A personal, ad-free Android audio and video player with Soulmans artwork, option
 - [Install the Android APK](Soulmans-Sound-Booster.apk)
 - [Download the Android Studio source](Soulmans-Sound-Booster-source.zip)
 
-Download the APK on the phone and open it to install. Version 8.1 uses the existing signing certificate and updates earlier Soulmans installs.
+Download the APK on the phone and open it to install. Version 8.2 uses the existing signing certificate and updates earlier Soulmans installs.
+
+## Waveform zoom and pan
+
+- The song waveform and MPC sample editor now have **+ / −** zoom buttons, from 1× to 128×. Peaks load at higher resolution so zoom reveals more of the recorded volume envelope.
+- **FULL SONG** (or **FULL FILE** in the sampler) shows the entire WAV. This is the initial view when loading a file.
+- **DEFAULT** shows about 30 seconds around the current playhead, or around the sample's IN point. Short files fit in full; very long files are limited to 128× magnification.
+- The **pan slider directly under the waveform** scrolls through the file. Its rectangular handle shrinks in proportion to the visible time range as zoom increases, with a minimum size for easy dragging. Tap elsewhere on the slider to move the window there. At full view it fills the slider and is disabled. Arrow keys and accessibility slider actions also move the window.
+- The readout shows zoom and the visible start/end times. Panning never seeks audio or changes sample trim points. Tapping or dragging the song waveform seeks to the time under your finger within the displayed window.
+- The playhead and sample IN/OUT markers follow the visible time range. Playback does not automatically move your chosen view. These navigation controls use PCM WAV peaks; unsupported WAV encodings show a message and disabled waveform controls. The ordinary track seek bar remains available for other formats.
 
 ## Excited face app icon
 
@@ -76,7 +85,7 @@ gradlew.bat connectedDebugAndroidTest
 gradlew.bat assembleRelease
 ```
 
-Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 9, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
+Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 10, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
 
 Media3 ExoPlayer and MediaSessionService provide decoding and background media controls. Storage Access Framework handles file and folder selection. SQLite stores tracks, playlists, and history. A custom PCM processor supplies the EQ, gain, limiter, and frequency analysis.
 
