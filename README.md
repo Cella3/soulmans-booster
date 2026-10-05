@@ -1,4 +1,4 @@
-# Soulmans Sound Booster — Music Player 8.0
+# Soulmans Sound Booster — Music Player 8.1
 
 A personal, ad-free Android audio and video player with Soulmans artwork, optional boost, a seven-band equalizer, four sample pads, live recording, music-reactive visuals, and a draggable floating mini player. Android 8.0 or newer. No account, ads, analytics, or internet permission. Audio recording and Display over other apps access are optional and requested only when you choose those features.
 
@@ -7,7 +7,14 @@ A personal, ad-free Android audio and video player with Soulmans artwork, option
 - [Install the Android APK](Soulmans-Sound-Booster.apk)
 - [Download the Android Studio source](Soulmans-Sound-Booster-source.zip)
 
-Download the APK on the phone and open it to install. Version 8.0 uses the existing signing certificate and updates earlier Soulmans installs.
+Download the APK on the phone and open it to install. Version 8.1 uses the existing signing certificate and updates earlier Soulmans installs.
+
+## Excited face app icon
+
+The launcher button now uses Soulmans' huge smiling face, red cap, sunglasses, and oversized neon cyan headphones. The PNG has a real transparent background around the head, and the launcher resource uses the cutout directly without an opaque background layer. Android launchers may apply their own mask or background to app buttons. The speaker-blast player background remains available in the app.
+
+- [Transparent icon PNG](Soulmans-Excited-Face-icon.png)
+- [Artwork generation prompt](Excited-icon-prompt.md)
 
 ## Floating mini player
 
@@ -69,7 +76,7 @@ gradlew.bat connectedDebugAndroidTest
 gradlew.bat assembleRelease
 ```
 
-Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 8, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
+Set `ANDROID_HOME` to an Android SDK or use an Android Studio `local.properties`. The application ID remains `com.cleargain.app`, version code is 9, and the delivered APK uses the existing signing certificate so it can update earlier versions. The private signing key is excluded from the public source ZIP. A new source checkout uses a new debug key unless the owner's existing key is supplied as `app/debug.keystore`; an APK signed with another key cannot replace an existing install.
 
 Media3 ExoPlayer and MediaSessionService provide decoding and background media controls. Storage Access Framework handles file and folder selection. SQLite stores tracks, playlists, and history. A custom PCM processor supplies the EQ, gain, limiter, and frequency analysis.
 
